@@ -188,6 +188,10 @@ h1 {
   margin: 0;
 }
 
+.section__title--compact {
+  margin-top: 44px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -213,6 +217,13 @@ h1 {
 .card p {
   margin: 0;
   color: var(--muted);
+}
+
+.process,
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .split {
@@ -352,6 +363,34 @@ h1 {
   grid-column: 1 / -1;
 }
 
+.consent {
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consent input[type="checkbox"] {
+  margin: 0;
+}
+
+.consent span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.consent a {
+  text-decoration: underline;
+}
+
+.spam-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .booking__actions {
   display: flex;
   gap: 12px;
@@ -374,9 +413,16 @@ h1 {
   color: #f7f3ee;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   border-top: 1px solid #1f2430;
+}
+
+.footer__company {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .footer__small {
@@ -384,6 +430,77 @@ h1 {
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.footer__legal a {
+  color: #f7f3ee;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #3a4355;
+}
+
+.footer__legal {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.admin {
+  min-height: 100vh;
+}
+
+.admin__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.admin__meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #222834;
+  background: var(--card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #232a38;
+  vertical-align: top;
+}
+
+.table th {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #243147;
+  color: #d8e6ff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 @media (max-width: 720px) {

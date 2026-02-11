@@ -26,13 +26,14 @@
         <h1>O seu carro, como novo.</h1>
         <p class="lead">
           Revisão e manutenção geral, diagnóstico eletrónico e serviços
-          especializados com garantia.
+          especializados com garantia. Atendemos todas as marcas.
         </p>
         <div class="cta">
           <a class="btn" href="#contacto">Marcar visita</a>
           <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
         </div>
         <div class="badges">
+          <div class="badge">Atendemos todas as marcas</div>
           <div class="badge">Mudança de óleo e filtros</div>
           <div class="badge">Travões e baterias</div>
           <div class="badge">Diagnóstico eletrónico</div>
@@ -44,7 +45,7 @@
       <section class="section" id="servicos">
         <div class="section__title">
           <h2>Serviços principais</h2>
-          <p>Estes são os serviços que realizamos na nossa oficina.</p>
+          <p>Estes são os serviços que realizamos na nossa oficina para viaturas de todas as marcas.</p>
         </div>
         <div class="grid">
           <article class="card">
@@ -78,6 +79,45 @@
         </div>
       </section>
 
+      <section class="section section--alt" id="confianca">
+        <div class="section__title">
+          <h2>Porque escolher-nos</h2>
+          <p>Atendimento transparente, processo claro e foco na qualidade do serviço.</p>
+        </div>
+        <div class="process">
+          <article class="card">
+            <h3>1. Pedido de marcação</h3>
+            <p>Recebemos o seu pedido por formulário, WhatsApp ou telefone.</p>
+          </article>
+          <article class="card">
+            <h3>2. Confirmação</h3>
+            <p>Entramos em contacto para confirmar data, hora e intervenção.</p>
+          </article>
+          <article class="card">
+            <h3>3. Intervenção</h3>
+            <p>Executamos o serviço com garantia e atualizamos o estado da viatura.</p>
+          </article>
+        </div>
+        <div class="section__title section__title--compact">
+          <h2>Testemunhos</h2>
+          <p>Opiniões de clientes sobre o nosso atendimento e qualidade.</p>
+        </div>
+        <div class="testimonials">
+          <article class="card">
+            <p>"Atendimento rápido e honesto. Resolvido no mesmo dia."</p>
+            <h3>Cliente - Revisão geral</h3>
+          </article>
+          <article class="card">
+            <p>"Explicaram tudo antes do serviço e cumpriram o orçamento."</p>
+            <h3>Cliente - Travões</h3>
+          </article>
+          <article class="card">
+            <p>"Diagnóstico certeiro e comunicação impecável durante a reparação."</p>
+            <h3>Cliente - Diagnóstico eletrónico</h3>
+          </article>
+        </div>
+      </section>
+
       <section class="section section--alt" id="sobre">
         <div class="split">
           <div>
@@ -91,6 +131,7 @@
               <li>Orçamentos claros e sem surpresas</li>
               <li>Atendimento rápido e personalizado</li>
               <li>Garantia nas reparações</li>
+              <li>Atendemos todas as marcas</li>
             </ul>
           </div>
           <div class="panel">
@@ -126,14 +167,182 @@
         <div class="cta center">
           <a class="btn" href="tel:+351253253463">Ligar agora</a>
           <a class="btn btn--ghost" href="https://wa.me/351253253463?text=Olá%2C%20quero%20marcar%20uma%20revisão%20na%20Auto%20J%20Ferreira.">Marcar revisão no WhatsApp</a>
-          <a class="btn btn--ghost" href="mailto:geral@autojferreira.pt?subject=Pedido%20de%20agendamento&body=Olá%2C%20pretendo%20marcar%20uma%20revisão.">Enviar email</a>
+        </div>
+        <div class="booking">
+          <h3>Marcação online</h3>
+          <p>Registe o seu pedido diretamente no site. A oficina entra em contacto para confirmar.</p>
+          <form class="booking__form" id="booking-form" novalidate>
+            <label class="form-field">
+              <span>Nome</span>
+              <input type="text" id="booking-name" name="name" autocomplete="name" required />
+            </label>
+            <label class="form-field">
+              <span>Telemóvel</span>
+              <input type="tel" id="booking-phone" name="phone" autocomplete="tel" required />
+            </label>
+            <label class="form-field">
+              <span>Serviço</span>
+              <select id="booking-service" name="service" required>
+                <option value="">Selecionar serviço</option>
+                <option>Revisão e manutenção geral</option>
+                <option>Mudança de óleo e filtros</option>
+                <option>Sistema de travagem</option>
+                <option>Diagnóstico eletrónico</option>
+                <option>Baterias</option>
+                <option>Serviços eletrónicos</option>
+                <option>Mecânica especializada</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span>Data preferencial</span>
+              <input type="date" id="booking-date" name="date" />
+            </label>
+            <label class="form-field form-field--full">
+              <span>Mensagem</span>
+              <textarea id="booking-message" name="message" rows="4" placeholder="Descreva brevemente o que precisa."></textarea>
+            </label>
+            <label class="form-field form-field--full consent">
+              <input type="checkbox" id="booking-consent" name="consent" required />
+              <span>Li e aceito a <a href="politica-privacidade.html">Política de Privacidade</a>.</span>
+            </label>
+            <label class="spam-trap" aria-hidden="true">
+              Website
+              <input type="text" id="booking-website" name="website" tabindex="-1" autocomplete="off" />
+            </label>
+            <div class="booking__actions form-field--full">
+              <button class="btn" id="booking-submit" type="button">Submeter marcação</button>
+            </div>
+            <p class="booking__feedback form-field--full" id="booking-feedback"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div>Auto J Ferreira</div>
-      <div class="footer__small">Oficina de reparação de automóveis</div>
+      <div class="footer__company">
+        <div>Auto J Ferreira</div>
+        <div class="footer__small">Empresa: Auto J Ferreira | Oficina de reparação de automóveis</div>
+      </div>
+      <div class="footer__legal">
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+        <a href="admin.php">Área interna</a>
+      </div>
     </footer>
+    <script>
+      (function () {
+        var form = document.getElementById("booking-form");
+        if (!form) return;
+
+        var feedback = document.getElementById("booking-feedback");
+        var submitBtn = document.getElementById("booking-submit");
+        var consent = document.getElementById("booking-consent");
+
+        function setFeedback(message, isError) {
+          feedback.textContent = message;
+          feedback.classList.toggle("booking__feedback--error", !!isError);
+        }
+
+        function getFormData() {
+          return {
+            name: document.getElementById("booking-name").value.trim(),
+            phone: document.getElementById("booking-phone").value.trim(),
+            service: document.getElementById("booking-service").value.trim(),
+            date: document.getElementById("booking-date").value,
+            message: document.getElementById("booking-message").value.trim(),
+            consent: consent.checked,
+            website: document.getElementById("booking-website").value.trim(),
+          };
+        }
+
+        function validate(data) {
+          if (!data.name || !data.phone || !data.service) {
+            setFeedback("Preencha nome, telemóvel e serviço para continuar.", true);
+            return false;
+          }
+          if (!data.consent) {
+            setFeedback("Tem de aceitar a Política de Privacidade para continuar.", true);
+            return false;
+          }
+          return true;
+        }
+
+        async function registerBooking(data) {
+          var response;
+          try {
+            response = await fetch("api/bookings.php", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: data.name,
+                phone: data.phone,
+                service: data.service,
+                date: data.date,
+                message: data.message,
+                consent: data.consent,
+                website: data.website,
+                source: "site",
+              }),
+            });
+          } catch (_networkError) {
+            throw new Error("Sem ligação ao servidor. Abra o site através de um servidor PHP.");
+          }
+
+          var rawText = await response.text().catch(function () {
+            return "";
+          });
+          var result = null;
+          if (rawText) {
+            try {
+              result = JSON.parse(rawText);
+            } catch (_e) {
+              result = null;
+            }
+          }
+
+          if (!response.ok) {
+            if (response.status === 405) {
+              throw new Error("O servidor não aceitou o envio (405). Abra o site num servidor PHP (ex.: php -S 127.0.0.1:3000).");
+            }
+            if (result && result.error) {
+              throw new Error(result.error);
+            }
+            throw new Error("Erro no servidor (" + response.status + "). " + (rawText || "Verifique a configuração do PHP."));
+          }
+
+          if (!result || !result.ok) {
+            throw new Error("Resposta inválida da API de marcações.");
+          }
+
+          return result.reference;
+        }
+
+        function setButtonsState(disabled) {
+          submitBtn.disabled = disabled;
+        }
+
+        submitBtn.addEventListener("click", function () {
+          var data = getFormData();
+          if (!validate(data)) return;
+
+          setButtonsState(true);
+          setFeedback("A registar marcação...", false);
+
+          registerBooking(data)
+            .then(function (reference) {
+              setFeedback("Marcação registada com sucesso. Referência: " + reference, false);
+              form.reset();
+            })
+            .catch(function (error) {
+              setFeedback(error.message, true);
+            })
+            .finally(function () {
+              setButtonsState(false);
+            });
+        });
+
+      })();
+    </script>
   </body>
 </html>
