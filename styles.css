@@ -131,6 +131,13 @@ h1 {
   box-shadow: 0 14px 28px rgba(217, 130, 43, 0.3);
 }
 
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 .btn--ghost {
   background: transparent;
   border: 1px solid var(--steel);
@@ -275,6 +282,92 @@ h1 {
   font-weight: 600;
 }
 
+.booking {
+  margin-top: 36px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #222834;
+  background: linear-gradient(150deg, #111620 0%, #181f2b 100%);
+}
+
+.booking h3 {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+}
+
+.booking p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.booking__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field span {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f131b;
+  border: 1px solid #283042;
+  color: var(--ink);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.16);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.booking__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.booking__feedback {
+  margin: 0;
+  color: #9fd6b9;
+  min-height: 20px;
+}
+
+.booking__feedback--error {
+  color: #ff9191;
+}
+
 .footer {
   padding: 32px 5vw 48px;
   background: #0a0d12;
@@ -300,5 +393,9 @@ h1 {
 
   .hero__content {
     margin-top: 60px;
+  }
+
+  .booking__form {
+    grid-template-columns: 1fr;
   }
 }
